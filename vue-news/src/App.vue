@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    hello
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 /* eslint-disable */
 export default {
- methods: {
-   fetchData() {
-     console.log('hello');
-   }
- } 
+ 
 }
 </script>
 
