@@ -14,11 +14,11 @@ export default {
     }
   },
   created() {
-    var vm = this;
+    console.log('호출 전: ', this);
     fetchNewsList()
-      .then(function(response) {
-        console.log(response);
-        vm.users = response.data;
+      .then(response => { // 화살표 함수를 쓰게 되면 비동기 함수에서 this가 해당 인스턴스의 this가 된다.
+        console.log('호출 후: ', this);
+        this.users = response.data;
       })
       .catch(function(error) {
         console.log(error);
