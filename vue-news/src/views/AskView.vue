@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div v-for="item in ask">{{ item.title }}</div>
+      <div v-for="item in this.$store.state.ask">{{ item.title }}</div>
   </div>
 </template>
 
@@ -14,14 +14,16 @@ export default {
     }
   },
   created() {
-    var vm = this;
-    fetchAsksList()
-      .then(function(response) {
-        vm.ask = response.data;
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+    this.$store.dispatch('FETCH_ASK');
+
+    // var vm = this;
+    // fetchAsksList()
+    //   .then(function(response) {
+    //     vm.ask = response.data;
+    //   })
+    //   .catch(function(error) {
+    //     console.log(error);
+    //   });
   },
 }
 </script>
