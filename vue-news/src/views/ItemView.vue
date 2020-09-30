@@ -1,0 +1,22 @@
+<template>
+  <diV>
+      <!-- {{ this.$store.state.item }} -->
+      <p>{{ this.$store.state.item.title }}</p>
+      <div>
+        {{ this.$store.state.item.content }}
+      </div>
+  </diV>
+</template>
+
+<script>
+export default {
+    created() {
+      const itemId = this.$route.params.id;
+      this.$store.dispatch('FETCH_ITEM', itemId);
+    }
+}
+</script>
+
+<style>
+
+</style>
