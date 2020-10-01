@@ -1,12 +1,11 @@
 <template>
   <div>
     <ul class="news-list">
-      <li v-for="item in fetchedAsk" class="post">
-        <!-- 포인트 영역 -->
+      <list-item></list-item>
+      <!-- <li v-for="item in fetchedAsk" class="post">
         <div class="points">
           {{ item.points}}
         </div>
-        <!-- 기타 정보 영역 -->
         <div>
           <p class="news-title">
             <router-link v-bind:to="`item/${item.id}`">
@@ -18,29 +17,33 @@
             <router-link v-bind:to="`/user/${item.user}`" class="link-text">{{ item.user }}</router-link>
           </small>
         </div>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import ListItem from '../components/ListItem.vue';
+// import { mapState, mapGetters } from 'vuex';
 
 export default {
-  computed: {
-    ...mapGetters([
-      'fetchedAsk'
-    ]),
-    // ...mapState({
-    //   ask: state => state.ask
-    // }),
-    // ask() {
-    //   return this.$store.state;
-    // }
+  components: {
+    ListItem,
   },
-  created() {
-    this.$store.dispatch('FETCH_ASK');
-  },
+  // computed: {
+  //   ...mapGetters([
+  //     'fetchedAsk'
+  //   ]),
+  // ...mapState({
+  //   ask: state => state.ask
+  // }),
+  // ask() {
+  //   return this.$store.state;
+  // }
+  // },
+  // created() {
+  //   this.$store.dispatch('FETCH_ASK');
+  // },
 }
 </script>
 
