@@ -30,6 +30,9 @@ export default {
   components: {
     ListItem,
   },
+  created() {
+    this.$store.dispatch('FETCH_ASK');
+  },
   // computed: {
   //   ...mapGetters([
   //     'fetchedAsk'

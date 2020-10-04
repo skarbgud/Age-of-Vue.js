@@ -41,16 +41,16 @@ export default {
   created() {
     // this.$store.dispatch('FETCH_NEWS');
     // console.log(this.$route.path === '/news');
-    const name = this.$route.name;
-    let actionName;
-    if (name === 'news') {
-      actionName = 'FETCH_NEWS';
-    } else if (name === 'ask') {
-      actionName = 'FETCH_ASK';
-    } else if (name === 'jobs') {
-      actionName = 'FETCH_JOBS';
-    }
-    this.$store.dispatch(actionName);
+    // const name = this.$route.name;
+    // let actionName;
+    // if (name === 'news') {
+    //   actionName = 'FETCH_NEWS';
+    // } else if (name === 'ask') {
+    //   actionName = 'FETCH_ASK';
+    // } else if (name === 'jobs') {
+    //   actionName = 'FETCH_JOBS';
+    // }
+    // this.$store.dispatch(actionName);
   },
   computed: {
     listItems() {
