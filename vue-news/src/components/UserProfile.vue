@@ -1,27 +1,22 @@
 <template>
-  <div>
-    <div class="user-container">
-          <div>
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="user-description">
-            <slot name="username">
-              <!-- 상위 컴포넌트에서 정의할 영역 -->
-            </slot>
-            <!-- <div>username : {{ info.id }}</div> -->
-            <!-- <router-link :to="`/user/${userInfo.user}`">
-              {{ userInfo.id }}
-            </router-link> -->
-            <div class="time">
-              <!-- time : {{ info.created }} -->
-              <slot name="time">
-                <!-- 상위 컴포넌트에서 정의할 영역 -->
-              </slot>
-            </div>
-            <slot name="karma"></slot>    
-          </div>
+  <div class="user-container">
+    <div>
+      <i class="fas fa-user"></i>
     </div>
-  </div>
+    <div class="user-description">
+      <slot name="username">
+        <!-- 상위 컴포넌트에서 정의할 영역 -->
+      </slot>
+      <div class="time">
+        <slot name="time">
+          <!-- 상위 컴포넌트에서 정의할 영역 -->
+        </slot>
+        <slot name="karma">
+          <!-- 상위 컴포넌트에서 정의할 영역 -->
+        </slot>    
+      </div>
+    </div>
+  </div>  
 </template>
 
 <script>
