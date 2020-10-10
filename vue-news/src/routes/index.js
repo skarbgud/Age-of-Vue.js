@@ -30,7 +30,7 @@ export const router = new VueRouter({
           store.dispatch('FETCH_LIST', to.name)
             .then(() => {
               console.log('fetched');
-              bus.$emit('end:spinner');
+              // bus.$emit('end:spinner');
               next();
             })
             .catch((error) => {

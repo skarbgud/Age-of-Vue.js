@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       async function fetchData() {
+           var list = await getUserList();
+           console.log(list);
+       }
+
+       function getUserList() {
+           return new Promise(function(resolve, reject){
+            var userList = ['user1','user2','user3'];
+            resolve(userList);
+           });
+       }
+   </script>
+</body>
+</html>
