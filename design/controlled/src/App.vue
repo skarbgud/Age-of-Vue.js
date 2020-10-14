@@ -1,5 +1,5 @@
 <template>
-  <check-box :checked="checked"></check-box>
+  <check-box v-model="checked"></check-box>
 </template>
 
 <script>
@@ -14,9 +14,5 @@ export default {
       checked: false,
     }
   },
-  created() {
-    fetchCheckBox()
-      .then(result => this.checkboxs = result.data);
-  }
 }
 </script>
