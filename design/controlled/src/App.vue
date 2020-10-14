@@ -1,0 +1,22 @@
+<template>
+  <check-box :checked="checked"></check-box>
+</template>
+
+<script>
+import CheckBox from './components/CheckBox.vue';
+
+export default {
+  components: {
+    CheckBox
+  },
+  data() {
+    return {
+      checked: false,
+    }
+  },
+  created() {
+    fetchCheckBox()
+      .then(result => this.checkboxs = result.data);
+  }
+}
+</script>
