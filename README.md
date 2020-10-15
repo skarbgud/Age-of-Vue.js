@@ -1,5 +1,7 @@
 # vue-advanced
 
+## https://newsview.netlify.app/news
+
 # CLI 2.x vs CLI 3.x
 * 명령어
   - 2.x : vue init '프로젝트 템플릿 이름' '파일 위치'
